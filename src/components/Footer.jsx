@@ -38,7 +38,7 @@ function Footer() {
     <footer className="bg-gray-50 border-t mt-20 pt-12 pb-6 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
           {/* Company Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -94,7 +94,7 @@ function Footer() {
           </motion.div>
 
           {/* Contact Info */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -104,10 +104,10 @@ function Footer() {
               {lang === "ar" ? "تواصل معنا" : "Contact Us"}
             </h4>
             <ul className="space-y-3">
-              {/* <li className="flex items-start gap-3">
+              <li className="flex items-start gap-3">
                 <FaPhone className="text-[#D97619] mt-1" />
                 <span className="text-gray-600">+20 123 456 789</span>
-              </li> */}
+              </li>
               <li className="flex items-start gap-3">
                 <FaEnvelope className="text-[#D97619] mt-1" />
                 <span className="text-gray-600">info@m3lm.com</span>
@@ -119,7 +119,7 @@ function Footer() {
                 </span>
               </li>
             </ul>
-          </motion.div>
+          </motion.div> */}
 
           {/* Newsletter */}
           <motion.div

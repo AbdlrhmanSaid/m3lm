@@ -57,7 +57,6 @@ function Privacy() {
           <h1 className="text-3xl md:text-4xl font-bold text-[#D97619] mb-2">
             {t("privacy.title")}
           </h1>
-          <p className="text-gray-600">{t("privacy.lastUpdated")}</p>
         </motion.div>
 
         {/* Main Content */}

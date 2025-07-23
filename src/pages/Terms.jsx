@@ -56,7 +56,6 @@ function Terms() {
           <h1 className="text-3xl md:text-4xl font-bold text-[#D97619] mb-2">
             {t("terms.title")}
           </h1>
-          <p className="text-gray-600">{t("terms.lastUpdated")}</p>
         </motion.div>
 
         {/* Main Content */}
