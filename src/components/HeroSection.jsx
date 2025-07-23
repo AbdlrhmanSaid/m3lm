@@ -7,30 +7,33 @@ import {
   FaHome,
   FaGooglePlay,
   FaApple,
-  FaArrowRight,
 } from "react-icons/fa";
 import { useEffect } from "react";
+
+const GooglePlayIcon = () => (
+  <img src="/google-play-logo.svg" alt="Google Play" className="w-12 h-12" />
+);
 
 function HeroSection() {
   const { t, i18n } = useTranslation();
 
   // Icons for home services
   const serviceIcons = [
-    { icon: <FaTools className="text-3xl" />, name: "plumbing" },
-    { icon: <FaBroom className="text-3xl" />, name: "cleaning" },
-    { icon: <FaPaintRoller className="text-3xl" />, name: "painting" },
-    { icon: <FaHome className="text-3xl" />, name: "maintenance" },
+    { icon: <FaTools className="text-4xl" />, name: "plumbing" },
+    { icon: <FaBroom className="text-4xl" />, name: "cleaning" },
+    { icon: <FaPaintRoller className="text-4xl" />, name: "painting" },
+    { icon: <FaHome className="text-4xl" />, name: "maintenance" },
   ];
 
-  // App store links (can be replaced with actual links when available)
+  // App store links
   const appStores = [
     {
-      icon: <FaGooglePlay className="text-2xl" />,
+      icon: <GooglePlayIcon className="text-4xl" />,
       name: "Google Play",
       soon: t("soon"),
     },
     {
-      icon: <FaApple className="text-2xl" />,
+      icon: <FaApple className="text-4xl" />,
       name: "App Store",
       soon: t("soon"),
     },
@@ -137,47 +140,35 @@ function HeroSection() {
           ))}
         </motion.div>
 
-        {/* CTA Button with pulse animation */}
-        <div className="flex justify-center mb-12">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.8, duration: 0.5 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-block"
-          >
-            <a
-              href="#cta"
-              className="bg-[#D97619] hover:bg-[#c56815] text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-full text-lg shadow-lg transform transition-all duration-300 flex items-center gap-2"
-            >
-              {t("hero.cta")}
-              <FaArrowRight className="inline" />
-            </a>
-          </motion.div>
-        </div>
-
-        {/* App Stores Section */}
         <motion.div
-          className="flex flex-col items-center"
+          className="flex flex-col items-center mb-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
+          transition={{ delay: 0.8 }}
         >
-          <h3 className="text-lg text-gray-600 mb-4">{t("downloadApp")}</h3>
-          <div className="flex flex-wrap justify-center gap-4">
+          <h3 className="text-2xl font-bold text-gray-800 mb-8">
+            {t("downloadApp")}
+          </h3>
+          <div className="flex flex-wrap justify-center gap-8">
             {appStores.map((store, index) => (
               <motion.div
                 key={index}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow w-40 cursor-pointer"
+                className={`${store.bgColor} ${store.textColor} ${store.borderColor} ${store.hoverEffect} 
+                          rounded-2xl p-6 shadow-xl transition-all w-56 h-40 flex flex-col 
+                          items-center justify-center border-2 cursor-pointer relative overflow-hidden`}
               >
-                <div className="flex items-center gap-3">
-                  <div className="text-[#D97619]">{store.icon}</div>
-                  <div>
-                    <div className="text-xs text-gray-500">{store.name}</div>
-                    <div className="text-sm font-medium text-[#D97619]">
+                {/* Animated background element */}
+                <div className="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-white bg-opacity-10"></div>
+
+                <div className="z-10 flex flex-col items-center gap-4">
+                  <div className="p-3 rounded-xl bg-white bg-opacity-20">
+                    {store.icon}
+                  </div>
+                  <div className="text-center">
+                    <div className="text-lg font-bold">{store.name}</div>
+                    <div className="text-sm font-semibold text-[#D97619] mt-2 bg-white bg-opacity-20 px-3 py-1 rounded-full">
                       {store.soon}
                     </div>
                   </div>
@@ -187,22 +178,22 @@ function HeroSection() {
           </div>
         </motion.div>
 
-        {/* Coming soon badge */}
+        {/* Coming soon badge - Enhanced */}
         <motion.div
-          className="mt-8 flex justify-center"
+          className="mt-6 flex justify-center"
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
             y: [0, -5, 0],
           }}
           transition={{
-            delay: 1.5,
+            delay: 1,
             duration: 2,
             repeat: Infinity,
             repeatType: "reverse",
           }}
         >
-          <span className="inline-block bg-[#D97619] bg-opacity-10 text-white px-6 py-2 rounded-full font-medium">
+          <span className="inline-block bg-[#D97619] text-white px-10 py-3 rounded-full font-bold text-lg shadow-lg transform transition-all hover:scale-105">
             {t("comingSoon")}
           </span>
         </motion.div>

@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { BiWorld } from "react-icons/bi";
 
 function Header() {
   const { i18n, t } = useTranslation();
@@ -63,7 +64,12 @@ function Header() {
           whileHover={{ scale: 1.05, boxShadow: "0 4px 8px rgba(0,0,0,0.1)" }}
           whileTap={{ scale: 0.95 }}
         >
-          {t("language")}
+          <span className="flex items-center gap-2">
+            <span>{t("language")}</span>
+            <span className="text-2xl">
+              <BiWorld />
+            </span>
+          </span>
         </motion.button>
       </motion.div>
     </motion.header>

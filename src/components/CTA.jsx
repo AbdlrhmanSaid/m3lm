@@ -43,8 +43,7 @@ function CTASection() {
               </h2>
               <p className="text-gray-600 mb-6">{t("cta.description")}</p>
 
-              <div className="space-y-4">
-                {/* Phone button */}
+              {/* <div className="space-y-4">
                 <motion.a
                   href="tel:+123456789"
                   whileHover={{ scale: 1.02 }}
@@ -55,7 +54,6 @@ function CTASection() {
                   <span>+20 123 456 789</span>
                 </motion.a>
 
-                {/* WhatsApp button */}
                 <motion.a
                   href="https://wa.me/20123456789"
                   target="_blank"
@@ -67,7 +65,7 @@ function CTASection() {
                   <FaWhatsapp className="text-xl" />
                   <span>{t("cta.whatsapp")}</span>
                 </motion.a>
-              </div>
+              </div> */}
             </div>
           </div>
         </motion.div>

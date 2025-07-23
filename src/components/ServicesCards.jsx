@@ -75,45 +75,6 @@ function ServicesCards() {
                 <p className="text-gray-600 mb-4">
                   {lang === "ar" ? service.desc_ar : service.desc_en}
                 </p>
-                <button className="text-[#D97619] font-medium flex items-center justify-center gap-2 mx-auto hover:text-[#c56815] transition">
-                  {lang === "ar" ? (
-                    <>
-                      <span>المزيد من التفاصيل</span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M15 19l-7-7 7-7"
-                        />
-                      </svg>
-                    </>
-                  ) : (
-                    <>
-                      <span>View details</span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
-                    </>
-                  )}
-                </button>
               </div>
             </motion.div>
           ))}

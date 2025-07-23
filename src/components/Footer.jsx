@@ -104,10 +104,10 @@ function Footer() {
               {lang === "ar" ? "تواصل معنا" : "Contact Us"}
             </h4>
             <ul className="space-y-3">
-              <li className="flex items-start gap-3">
+              {/* <li className="flex items-start gap-3">
                 <FaPhone className="text-[#D97619] mt-1" />
                 <span className="text-gray-600">+20 123 456 789</span>
-              </li>
+              </li> */}
               <li className="flex items-start gap-3">
                 <FaEnvelope className="text-[#D97619] mt-1" />
                 <span className="text-gray-600">info@m3lm.com</span>
@@ -136,7 +136,7 @@ function Footer() {
                 ? "اشترك ليصلك كل جديد عن خدماتنا وعروضنا"
                 : "Subscribe to get updates on our services and offers"}
             </p>
-            <form className="flex gap-2">
+            {/* <form className="flex gap-2">
               <input
                 type="email"
                 placeholder={lang === "ar" ? "بريدك الإلكتروني" : "Your email"}
@@ -151,7 +151,7 @@ function Footer() {
               >
                 {lang === "ar" ? "اشتراك" : "Subscribe"}
               </motion.button>
-            </form>
+            </form> */}
           </motion.div>
         </div>
 
