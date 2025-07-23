@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Cairo", "Poppins", sans-serif;
+}
+
+/* Tailwind custom classes */
+@layer utilities {
+  .font-arabic {
+    font-family: "Cairo", sans-serif;
+  }
+
+  .font-english {
+    font-family: "Poppins", sans-serif;
+  }
+
+  .rtl {
+    direction: rtl;
+  }
+
+  .ltr {
+    direction: ltr;
+  }
+}
